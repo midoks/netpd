@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+build
+bin
+CMD_OUTPUT
+cmake_install.cmake
+CMakeFiles
+Makefile
