@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) midoks@163.com (midoks)
+ */
+
 
 #include <lua.h>
 #include <stdio.h>

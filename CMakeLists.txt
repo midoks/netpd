@@ -72,14 +72,16 @@ include_directories(${LUA_INCLUDE_DIR})
 
 aux_source_directory(src/lua DIR_SRCS_LUA)
 add_subdirectory(src/lua)
-
 include_directories(src/lua)
 
-set(CMAKE_C_STANDARD 11)
+aux_source_directory(src/pd DIR_PD_SRCS)
+add_subdirectory(src/pd)
+include_directories(src/pd)
+
 set(SOURCE_FILES netpd.c)
 
 add_executable(netpd ${SOURCE_FILES})
-target_link_libraries(netpd netpd_lua)
+target_link_libraries(netpd pd netpd_lua)
 
 MESSAGE(STATUS "VAR SOURCE_FILES: ${SOURCE_FILES}")
 MESSAGE(STATUS "VAR LUA_LIBRARIES: ${LUA_LIBRARIES}")
